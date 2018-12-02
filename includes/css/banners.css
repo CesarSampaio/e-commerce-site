@@ -1,0 +1,18 @@
+.banner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.banner {
+    width: 40vw;
+    height: auto;
+    -webkit-box-shadow: 3px 3px 22px 0px rgba(94,84,94,0.58);
+-moz-box-shadow: 3px 3px 22px 0px rgba(94,84,94,0.58);
+box-shadow: 3px 3px 22px 0px rgba(94,84,94,0.58);
+}
+
+.banner img {
+    width: 40vw;
+    height: auto;
+}

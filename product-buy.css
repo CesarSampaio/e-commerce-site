@@ -1,0 +1,89 @@
+.span6-r {
+    width: 50%;
+    float: right;
+    height: 940px;
+    min-height: 940px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.atributos div ul li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: normal;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.atributos ul li a {
+    box-shadow: 0 0 0px 1px #ccc;
+    border-radius: 100px;
+    border: 0;
+    transition: all .2s ease-in-out;
+    margin: 0 2px 2px 0;
+    position: relative;
+    padding: 50px;
+}
+
+.atributo-comum a {
+    text-decoration: none;
+}
+
+a {
+    color: #555;
+}
+
+.product-buy-label {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+.product-buy-ul {
+    display: inline;
+}
+
+    .size-button {
+        width: 75px;
+        border-radius: 20px;
+        border: 1px solid green;
+        font-size: 2.5rem;
+        padding: 1px;
+        color: #000;
+        text-align: center;
+        float: left;
+        margin-right: 15px;
+        transition: all 0.4s;
+    }
+
+    .size-button:hover {
+        color: #fff;
+        background: green;
+    }
+
+.product-buy-price {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 4rem;
+}
+
+.product-buy-form {
+    margin-top: 5rem;
+}
+
+.product-buy-number {
+    width: 5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.product-buy-button {
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    background: yellowgreen;
+    font-size: 2rem;
+    margin-top: 3rem;
+}

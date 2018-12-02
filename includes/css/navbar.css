@@ -1,0 +1,52 @@
+
+    /************************************************************/
+    /*      Navbar
+    /************************************************************/
+    .menu {
+        border-bottom: 1px solid rgb(164, 164, 164);
+    }
+    
+    .navbar {
+        margin: 0 auto;
+        display: block;
+        border-radius: 0;
+    }
+
+    .navbar-nav {
+        float: none;
+        width: 100%;
+    }
+
+    .navbar-wrapper {
+        margin: 0 auto;
+        width: 95%;
+        height: 4vw;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .nav {
+        margin: 0 auto;
+        height: 4vw;
+    }
+
+    .navbar-li {
+        margin-right: 1.2rem;
+        height: 4vw;
+    }
+
+    .navbar-dropdown-li {
+        margin-right: 1.2rem;
+    }
+
+    .customer-panel {
+        padding: 10px 5px 10px 15px;
+        height: 2.5vw;
+        color: #fff;
+        background: yellowgreen;
+        font-size: 1rem;
+        vertical-align: 100%;
+        transform: translateY(25%);
+        border-radius: 1rem;
+    }

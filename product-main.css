@@ -1,0 +1,49 @@
+.product-buy-wrapper {
+    min-height: 940px;
+}
+
+.span6-l {
+    width: 50%;
+    float: left;
+}
+
+.slick-next::before {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-style: normal;
+    color: black;
+    content:"\f138";
+  }
+  
+  .slick-prev::before {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-style: normal;
+    color: black;
+    content:"\f137";
+  }
+  
+  .slider3 {
+    width: 100%;
+    max-width: 100%;
+    height: 12rem; 
+    margin: 20px 5px;
+  }
+  
+  .slider3 .product-thumbnails {
+    width: 100px;
+    height: 120px;
+    float: left;
+    margin: 0.5rem 1rem;
+  }
+  
+  .slider3 .product-thumbnails img {
+    width: 100px;
+    height: 120px;
+    float: left;
+    margin: 0.5rem 1rem;
+  }
+
+  .picture-slider-container {
+      height: 12rem;
+  }

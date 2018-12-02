@@ -1,0 +1,99 @@
+.top-bar {
+    height: 15vh;
+    width: 100vw;
+    max-width: 100%;
+    border-bottom: 1px solid rgb(164, 164, 164);
+    margin-top: 5vh;
+}
+
+.logo-bar {
+    width: 15%;
+    max-width: 15%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+    .logo-bar img {
+        width: auto;
+        height: 95%;
+        margin-top: 3px;
+    }
+
+.search-bar {
+    width: 40%;
+    max-width: 40%;
+    height: 100%;
+    float: left;
+}
+
+    .form-search {
+        height: 15vh;
+        width: 40%;
+        position: absolute;
+    }
+
+        .search-input {
+            height: 6vh;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0%;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 1.5rem;
+        }
+
+        .search-input::placeholder {
+            font-family: 'Font Awesome\ 5 Free';
+            font-size: 1.5rem;
+        }
+
+.top-bar-links-wrapper {
+    width: 45%;
+    max-width: 45%;
+    height: 15vh;
+    float: right;
+}
+
+    .top-bar-links {
+        width: 45%;
+        max-width: 45%;
+        height: 15vh;
+        position: absolute;
+    }
+
+        .top-links {
+            width: calc(80% / 3);
+            float: right;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 1.5rem;
+        }
+
+        .top-links-icon {
+            width: 5%;
+            font-size: 2rem;
+            font-weight: 400;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            float: right;
+            margin-right: 1.5rem;
+        }
+
+        .top-icon {
+            font-size: 2rem;
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        .top-link-text {
+            display: inline;
+        }

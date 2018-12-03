@@ -134,11 +134,11 @@
 }
 
     .fade-carousel .slides .slide-1 {
-        background-image: url(/images/bikini.jpg); 
+        background-image: url(/images/carousel-bikini.jpg); 
     }
 
     .fade-carousel .slides .slide-2 {
-        background-image: url(/images/capsules.jpg);
+        background-image: url(/images/carousel-capsules.jpg);
     }
 
 /********************************/

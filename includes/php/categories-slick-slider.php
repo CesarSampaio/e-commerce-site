@@ -1,61 +1,81 @@
 
+    <?php
+        /*$row="";*/
+        $i = 0;
+
+        /*$resultArray = array();
+        $resultlog = mysqli_query($con, "SELECT * from product_categories");
+            while($row = mysqli_fetch_array($resultlog)) {
+                $resultArray[] = $row;
+            }
+        print_r($resultArray);
+
+        echo "<br>";*/
+
+        $resultArray02 = array();
+        $css_query_01 = "select * from categories where cat_title='Moda Praia'";
+        $css_result_01 = mysqli_query($con, $css_query_01);
+        while($row = mysqli_fetch_array($css_result_01)) {
+            $lt = $row['cat_id'];
+            $an = $row['cat_title'];
+                /*echo "<script>alert(".$lt.")</script>";
+                echo $lt; echo "<br>";
+                echo $an;
+                $resultArray02=$row;*/
+        }
+
+        /*print_r($resultArray02);*/
+
+        /*echo "<br>";echo "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc";*/
+        
+        $resultArray03 = array();
+        $css_query_02 = "select * from products where cat_id = " . $lt;
+        /*echo $css_query_02;echo "<br>";echo "*************************************************";*/
+        $css_result_02 = mysqli_query($con, $css_query_02);
+        /*print_r($css_result_02);echo "<br>";echo "*************************************************";*/
+        $num_rows_array = mysqli_num_rows($css_result_02);
+        /*echo $num_rows_array;echo "<br>";echo "*************************************************";*/
+        while($row = mysqli_fetch_array($css_result_02)) {
+            $resultArray03[] = $row;
+        }
+            /*print_r($resultArray03);echo "<br>";echo "cccccccccccccccccccccccccccccccccccccccccccccccccccccccc";
+            echo implode(', ', $resultArray03[0]);
+            echo "<br><br>";
+            echo $resultArray03[0][0];echo "<br>";
+            echo $resultArray03[0]['product_id'];echo "<br>";
+            echo $resultArray03[0]['product_features'];echo "<br>";
+            echo $resultArray03[0]['product_keywords'];echo "<br>";
+            echo $resultArray03[0]['product_label'];echo "<br>";
+            echo $resultArray03[0]['product_type'];echo "<br>";
+            echo $resultArray03[0]['product_img1'];echo "<br>";
+            echo $resultArray03[0]['product_img2'];echo "<br>";
+            echo $resultArray03[0]['product_title'];echo "<br>";
+            echo $resultArray03[0]['product_price'];echo "<br>";*/
+    ?>
+    
     <div class="slick-slider-container">
-        <div class="slick-slider-title">Nome</div>
-        <div class="slider2">
-            <!--/***************************************************************************/-->
-            <div class="abc">
-                <div class="product-slider">
-                    <div class="product-slider-wrapper">
-                        <div class="product-slider-card">
-                            <img src="https://www.lindybop.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/l/classicsheathginghamwroyfront.jpg" alt="" class="product-img-card">
-                            <i class="fas fa-heart fa-3x product-slider-icon"></i>
-                            <p class="product-slider-nome">Calcinha Biquini Fio Dental Preta</p>
-                            <p class="product-slider-price">R$39,95</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--/***************************************************************************/-->
-            <div class="abc">
-                <div class="product-slider">
-                    <div class="product-slider-wrapper">
-                        <div class="product-slider-card">
-                            <img src="https://media1.popsugar-assets.com/files/thumbor/uhzXnd2-xidu2aTBx_AGqiUHpkE/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/06/09/961/n/1922564/83864a3a593b1b8c68a510.84989280_9452048_fpx/i/Tory-Burch-Colorblock-Wrap-One-Piece-Swimsuit.jpg" alt="" class="product-img-card">
-                            <i class="fas fa-heart fa-3x product-slider-icon"></i>
-                            <p class="product-slider-nome">Calcinha Biquini Fio Dental Preta</p>
-                            <p class="product-slider-price">R$39,95</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--/***************************************************************************/-->
-            <div class="abc">
-                <div class="product-slider">
-                    <div class="product-slider-wrapper">
-                        <div class="product-slider-card">
-                            <img src="https://www.bikinivillage.com/media/catalog/product/cache/6/small_image/800x1000/af37b1efef5aa8fca9966a1bb8cbbd39/B/V/BV_CAMPAGNE_MiracleSuit_6513046_001.jpg" alt="" class="product-img-card">
-                            <i class="fas fa-heart fa-3x product-slider-icon"></i>
-                            <p class="product-slider-nome">Calcinha Biquini Fio Dental Preta</p>
-                            <p class="product-slider-price">R$39,95</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--/***************************************************************************/-->
-            <div class="abc">
-                <div class="product-slider">
-                    <div class="product-slider-wrapper">
-                        <div class="product-slider-card">
-                            <img src="https://brasbriefsandmore.co.uk/wp-content/uploads/2017/05/lepel_india_swimsuit_18_wp.jpg" alt="" class="product-img-card">
-                            <i class="fas fa-heart fa-3x product-slider-icon"></i>
-                            <p class="product-slider-nome">Calcinha Biquini Fio Dental Preta</p>
-                            <p class="product-slider-price">R$39,95</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="slick-slider-title"><?php echo $an ?></div>
+            <div class="slider2">
+                <?php
+                    while($i < $num_rows_array) {
+                        echo '              <!--/****************************************************************************************************/-->';
+                        echo '              <div class="abc">';
+                        echo '                  <div class="product-slider">';
+                        echo '                      <div class="product-slider-wrapper">';
+                        echo '                          <div class="product-slider-card">';
+                        echo '                              <div class="product-slider-image-container">';
+                        echo '                                  <img src="/product_images/'; echo $resultArray03[$i]['product_img1']; echo '" alt="" class="product-img-card">';
+                        echo '                              </div>';
+                        echo '                              <i class="fas fa-heart fa-3x product-slider-icon"></i>';
+                        echo '                              <p class="product-slider-nome">'; echo $resultArray03[$i]['product_title']; echo '</p>';
+                        echo '                              <p class="product-slider-price">'; echo $resultArray03[$i]['product_price']; echo '</p>';
+                        echo '                          </div>';
+                        echo '                      </div>';
+                        echo '                  </div>';
+                        echo '              </div>';
+                        $i++;
+                    }
+                ?>
             </div>
         </div>
     </div>

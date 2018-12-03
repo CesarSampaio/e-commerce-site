@@ -44,17 +44,21 @@
   height: 29vw;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
-.product-img-card {
+.product-slider-image-container {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
+  width: 225px;
+  height: 282px;
+  overflow: hidden;
 }
 
   .product-img-card {
-    width: 225px;
     height: auto;
+    width: 225px;
   }
 
 .product-slider-icon {

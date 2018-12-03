@@ -19,7 +19,6 @@
 
     .navbar-wrapper {
         margin: 0 auto;
-        width: 95%;
         height: 4vw;
         font-family: 'Montserrat', sans-serif;
         font-size: 2rem;
@@ -29,10 +28,12 @@
     .nav {
         margin: 0 auto;
         height: 4vw;
+        width: auto;
+        display: inline-block;
     }
 
     .navbar-li {
-        margin-right: 1.2rem;
+        margin-right: 1.5rem;
         height: 4vw;
     }
 
@@ -41,12 +42,12 @@
     }
 
     .customer-panel {
-        padding: 10px 5px 10px 15px;
+        padding: 10px 15px 10px 15px;
         height: 2.5vw;
         color: #fff;
         background: yellowgreen;
         font-size: 1rem;
         vertical-align: 100%;
-        transform: translateY(25%);
+        transform: translateY(30%);
         border-radius: 1rem;
     }

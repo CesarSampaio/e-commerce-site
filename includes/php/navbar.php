@@ -54,7 +54,7 @@
                                 echo "</a>";
                             ?>
                         </li>
-                        <li class="navbar-li"><a href="#">Carrinho</a></li>
+                        <!--<li class="navbar-li"><a href="#">Carrinho</a></li>-->
                         <li class="navbar-li">
                             <?php
                                 echo $customer; 

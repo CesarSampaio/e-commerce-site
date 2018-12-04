@@ -57,8 +57,9 @@
 }
 
   .product-img-card {
-    height: auto;
     width: 225px;
+    height: auto;
+    min-height: 228px;
   }
 
 .product-slider-icon {

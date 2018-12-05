@@ -39,6 +39,10 @@
                         echo '                              <i class="fas fa-heart fa-3x product-slider-icon"></i>';
                         echo '                              <p class="product-slider-nome">'; echo $resultArray03[$k]['product_title']; echo '</p>';
                         echo '                              <p class="product-slider-price">R$ '; echo $resultArray03[$k]['product_price']; echo '</p>';
+                        echo '                              <form action="product-page.php" class="slick-add-button" method="POST">';
+                        echo '                                  <input type="hidden" name="incoming_product_id" value="' . $resultArray03[$k]['product_id'] . '">';
+                        echo '                                  <input type="submit" value="Comprar" class="product-slider-submit">';
+                        echo '                              </form>';
                         echo '                          </div>';
                         echo '                      </div>';
                         echo '                  </div>';

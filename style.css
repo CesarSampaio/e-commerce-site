@@ -17,16 +17,12 @@ body {
     color: #333333;
     background-color: #fff;
     overflow-x: hidden;
-    
     }
     
     /* Top Navbar Styles  */
-    
     #top {
-    
     background: #555555;
     padding: 10px 0;
-    
     }
     
     #top .offer {
@@ -34,9 +30,7 @@ body {
     }
     
     #top .offer .btn {
-    
     text-transform: uppercase;
-    
     }
     
     @media (max-width: 991px) {
@@ -708,7 +702,7 @@ body {
     .label .thelabel {
     
     position: relative;
-    width: 100px;
+    width: 150px;
     padding: 6px 50px 6px 15px;
     margin: 40px 50px 10px -71px;
     color: #fff;

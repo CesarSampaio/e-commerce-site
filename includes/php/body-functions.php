@@ -28,3 +28,15 @@
                 jQuery('.product-container-image img').attr('src', attr);
             };
         </script>
+
+        <script>
+            $('#sizes').on('click','li.size-button', function() {
+                //alert($(this).attr('id').innerHTML);   
+                var product_size = $(this).attr('id');
+                //alert(product_size);
+                //alert('OK');
+                product_size = String(product_size);
+                document.getElementById('product-size').value = $(this).attr('id');
+                document.getElementById('size_label').innerHTML = product_size;
+            });
+        </script>

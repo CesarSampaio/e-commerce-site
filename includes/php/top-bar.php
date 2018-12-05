@@ -22,7 +22,9 @@
                 <p class="top-link-text">Favoritos</p>
             </div>
             <div class="top-links-icon">
-                <i class="fas fa-shopping-cart top-icon"></i>
+                <a href="cart.php">
+                    <i class="fas fa-shopping-cart top-icon"></i>
+                </a>    
             </div>
         </div>
     </div>

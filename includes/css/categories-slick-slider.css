@@ -41,7 +41,7 @@
 
 .product-slider-card {
   width: 23vw;
-  height: 29vw;
+  height: 32vw;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -74,17 +74,37 @@
   font-size: 1.5rem;
   text-align: center;
   left: 50%;
-  top: 76%;
+  top: 70%;
   transform: translateX(-50%);
+  margin: 0;
 }
 
 .product-slider-price {
-  font-size: 3rem;
   position: absolute;
+  font-size: 3rem;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.slick-add-button {
+  position: absolute;
+  font-size: 1.5rem;
   top: 85%;
   left: 50%;
   transform: translateX(-50%);
 }
+
+  .product-slider-submit {
+    color: #fff;
+    background: yellowgreen;
+    border: none;
+    outline: none;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
 
 /*********************************************
 *********************************************/

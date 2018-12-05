@@ -20,7 +20,7 @@
                         <?php
                             $ip_add = getRealUserIp();
                             $select_cart = "select * from cart where ip_add='$ip_add'";
-                            $run_cart = mysqli_query($con,$select_cart);
+                            $run_cart = mysqli_query($con, $select_cart);
                             $count = mysqli_num_rows($run_cart);
                         ?>
                         <p class="text-muted" > Você tem no momento <?php echo items(); ?> item(s) no seu carrinho. </p>
@@ -29,9 +29,9 @@
                                 <thead><!-- thead Starts -->
                                     <tr>
                                         <th colspan="2" >Produto</th>
-                                        <th>Quantity</th>
-                                        <th>Unit Price</th>
-                                        <th>Size</th>
+                                        <th>Quantidade: </th>
+                                        <th>Preço Unitário: </th>
+                                        <th>Tamanho: </th>
                                         <th colspan="1">Deletar</th>
                                         <th colspan="2"> SubTotal </th>
                                     </tr>
@@ -41,21 +41,21 @@
                                         $total = 0;
                                         $total_weight = 0;
                                         $physical_products = array();
-                                        while($row_cart = mysqli_fetch_array($run_cart)){
+                                        while($row_cart = mysqli_fetch_array($run_cart)) {
                                             $pro_id = $row_cart['p_id'];
                                             $pro_size = $row_cart['size'];
                                             $pro_qty = $row_cart['qty'];
                                             $only_price = $row_cart['p_price'];
                                             $get_products = "select * from products where product_id='$pro_id'";
-                                            $run_products = mysqli_query($con,$get_products);
-                                            while($row_products = mysqli_fetch_array($run_products)){
+                                            $run_products = mysqli_query($con, $get_products);
+                                            while($row_products = mysqli_fetch_array($run_products)) {
                                                 $product_title = $row_products['product_title'];
                                                 $product_img1 = $row_products['product_img1'];
                                                 $product_type = $row_products['product_type'];
                                                 $product_weight = $row_products['product_weight'];
                                                 $sub_total_weight = $product_weight * $pro_qty;
                                                 $total_weight += $sub_total_weight;
-                                                if($product_type == "physical_product" ){
+                                                if($product_type == "physical_product" ) {
                                                     array_push($physical_products, $pro_id);
                                                 }
                                                 $sub_total = $only_price*$pro_qty;
@@ -73,7 +73,7 @@
                                                         <input type="text" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id="<?php echo $pro_id; ?>" class="quantity form-control">
                                                     </td>
                                                     <td>
-                                                        $<?php echo $only_price; ?>.00
+                                                        R$<?php echo $only_price; ?>
                                                     </td>
                                                     <td>
                                                         <?php echo $pro_size; ?>
@@ -82,17 +82,18 @@
                                                         <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
                                                     </td>
                                                     <td>
-                                                        $<?php echo $sub_total; ?>.00
+                                                        $<?php echo $sub_total; ?>
                                                     </td>
                                                 </tr><!-- tr Ends -->
-                                    <?php   }
+                                    <?php
+                                            }
                                         }
                                     ?>
                                 </tbody><!-- tbody Ends -->
                                 <tfoot><!-- tfoot Starts -->
                                     <tr>
-                                        <th colspan="5"> Total </th>
-                                        <th colspan="2"> <span class="subtotal-cart-price">$<?php echo $total; ?></span>.00 </th>
+                                        <th colspan="5"> Total: </th>
+                                        <th colspan="2"> <span class="subtotal-cart-price">$<?php echo $total; ?></span></th>
                                     </tr>
                                 </tfoot><!-- tfoot Ends -->
                             </table><!-- table Ends -->
@@ -101,7 +102,7 @@
                                     <label>Código de Cupom: </label>
                                     <input type="text" name="code" class="form-control">
                                 </div><!-- form-group Ends -->
-                                    <input class="btn btn-primary" type="submit" name="apply_coupon" value="Apply Coupon Code" >
+                                    <input class="btn btn-primary" type="submit" name="apply_coupon" value="Código do Cupom" >
                             </div><!-- form-inline pull-right Ends -->
                         </div><!-- table-responsive Ends -->
                         <div class="box-footer"><!-- box-footer Starts -->
@@ -115,7 +116,7 @@
                                     <i class="fa fa-refresh"></i> Atualizar Carrinho
                                 </button>
                                 <a href="checkout.php" class="btn btn-primary">
-                                    Proceed to checkout <i class="fa fa-chevron-right"></i>
+                                    Finalizar Compra <i class="fa fa-chevron-right"></i>
                                 </a>
                             </div><!-- pull-right Ends -->
                         </div><!-- box-footer Ends -->
@@ -179,13 +180,13 @@
                 <div id="row same-height-row"><!-- row same-height-row Starts -->
                     <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
                         <div class="box same-height headline"><!-- box same-height headline Starts -->
-                            <h3 class="text-center"> You also like these Products </h3>
+                            <h3 class="text-center"> Você pode gostar desses produtos: </h3>
                         </div><!-- box same-height headline Ends -->
                     </div><!-- col-md-3 col-sm-6 Ends -->
                     <?php
                         $get_products = "select * from products order by rand() LIMIT 0,3";
-                        $run_products = mysqli_query($con,$get_products);
-                        while($row_products=mysqli_fetch_array($run_products)){
+                        $run_products = mysqli_query($con, $get_products);
+                        while($row_products=mysqli_fetch_array($run_products)) {
                             $pro_id = $row_products['product_id'];
                             $pro_title = $row_products['product_title'];
                             $pro_price = $row_products['product_price'];
@@ -221,16 +222,13 @@
                                             <img src='product_images/$pro_img1' class='img-responsive' >
                                         </a>
                                         <div class='text' >
-                                            <center>
-                                                <p class='btn btn-primary'> $manufacturer_name </p>
-                                            </center>
                                             <hr>
                                             <h3><a href='$pro_url' >$pro_title</a></h3>
                                             <p class='price' > $product_price $product_psp_price </p>
                                             <p class='buttons' >
-                                                <a href='$pro_url' class='btn btn-default' >View details</a>
+                                                <a href='$pro_url' class='btn btn-default' >Ver detalhes</a>
                                                 <a href='$pro_url' class='btn btn-primary'>
-                                                    <i class='fa fa-shopping-cart'></i> Add to cart
+                                                    <i class='fa fa-shopping-cart'></i> Comprar
                                                 </a>
                                             </p>
                                         </div>
@@ -242,10 +240,11 @@
                     ?>
                 </div><!-- row same-height-row Ends -->
             </div><!-- col-md-9 Ends -->
+
             <div class="col-md-3"><!-- col-md-3 Starts -->
                 <div class="box" id="order-summary"><!-- box Starts -->
                     <div class="box-header"><!-- box-header Starts -->
-                        <h3>Order Summary</h3>
+                        <h3>Resumo da Ordem</h3>
                     </div><!-- box-header Ends -->
                     <p class="text-muted">
                         Frete e Custos Adicionais são calculados com Base nos Valores
@@ -255,8 +254,8 @@
                         <table class="table"><!-- table Starts -->
                             <tbody id="cart-summary-tbody"><!-- tbody Starts -->
                                 <tr>
-                                    <td> Order Subtotal </td>
-                                    <th> $<?php echo $total; ?>.00 </th>
+                                    <td> Subtotal da Ordem: </td>
+                                    <th> R$<?php echo $total; ?></th>
                                 </tr>   
                                 
                                 <?php if(count($physical_products) > 0) { ?>
@@ -264,10 +263,10 @@
                                 <tr>
                                     <th colspan="2">
                                         <p class="shipping-header text-muted">
-                                            Cart Total Weight: <?php echo $total_weight; ?> Kg
+                                            Peso Total da Ordem: <?php echo $total_weight; ?> Kg
                                         </p>
                                         <p class="shipping-header text-muted">
-                                            <i class="fa fa-truck"></i> Shipping:
+                                            <i class="fa fa-truck"></i> Frete:
                                         </p>
                                         <ul class="list-unstyled"><!-- ul list-unstyled Starts -->
                                             <?php
@@ -575,16 +574,12 @@
                                             $total_cart_price = $total + @$_SESSION["shipping_cost"];
                                         } 
                                         ?>
-                                        <tr>
-                                            <td>Tax</td>
-                                            <th>$0.00</th>
-                                        </tr>
                                         <tr class="total">
                                             <td>Total</td>
                                             <?php if(count($physical_products) > 0){ ?>
-                                            <th class="total-cart-price">$<?php echo $total_cart_price; ?>.00</th>
+                                            <th class="total-cart-price">$<?php echo $total_cart_price; ?></th>
                                             <?php }else{ ?>
-                                            <th class="total-cart-price">$<?php echo $total; ?>.00</th>
+                                            <th class="total-cart-price">$<?php echo $total; ?></th>
                                             <?php } ?>
                                         </tr>
                             </tbody><!-- tbody Ends -->
@@ -626,11 +621,9 @@
                 var shipping_cost = Number($(this).data("shipping_cost"));
                 var total = Number(<?php echo $total; ?>);
                 var total_cart_price = total + shipping_cost;
-                $(".total-cart-price").html("$" + total_cart_price + ".00"); });
+                $(".total-cart-price").html("$" + total_cart_price); });
         <?php
             }
         ?>
     });
     </script>
-    </body>
-</html>

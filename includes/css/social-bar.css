@@ -5,6 +5,8 @@
     max-width: 100%;
     position: absolute;
     top: 0;
+    background: black;
+    color: #fff;
 }
 
 .social-icons {

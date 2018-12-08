@@ -4,14 +4,17 @@
     max-width: 100%;
     border-bottom: 1px solid rgb(164, 164, 164);
     margin-top: 5vh;
+    background: black;
+    color: #fff;
 }
 
 .logo-bar {
-    width: 15%;
-    max-width: 15%;
+    width: 20%;
+    max-width: 20%;
     height: 100%;
     float: left;
     text-align: center;
+    padding: 10px;
 }
 
     .logo-bar img {
@@ -21,8 +24,8 @@
     }
 
 .search-bar {
-    width: 40%;
-    max-width: 40%;
+    width: 35%;
+    max-width: 35%;
     height: 100%;
     float: left;
 }

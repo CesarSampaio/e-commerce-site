@@ -3,10 +3,11 @@
         $product_id = $_POST['incoming_product_id'];
         echo "<script>alert($product_id)</script>";
     } else {
-        $product_id = $_POST['product-id'];
+        $product_id = 23;//$_POST['product-id'];
         echo "<script>alert($product_id)</script>";
     }
     include "functions.php";
+    $product_id = 23;
 
     include "includes/php/header.php";
     include "includes/php/social-bar.php";

@@ -12,8 +12,8 @@
 ?>
 
     <div class="menu">
-        <nav class="navbar-default"  style="background-color: white">
-            <div class="container-fluid">
+        <nav class="navbar-default">
+            <div class="container-fluid" style="background: black">
                 <div class="navbar-wrapper">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">

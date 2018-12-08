@@ -8,4 +8,5 @@
     } else {
         
     }
+    mysqli_set_charset($con, "utf8");
 ?>

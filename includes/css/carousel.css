@@ -4,17 +4,17 @@
     .carousel-container {
         display: block;
         margin: 0;
-        height: 100vh;
+        height: 80vh;
     }    
 
     .carousel-wrapper {
         display: block;
         margin: 0;
-        height: 100vh;
+        height: 80vh;
     }
 
     .carousel-inner {
-        height: 100vh;
+        height: 80vh;
         position: relative;
     }
 
@@ -27,11 +27,11 @@
 /********************************/
     .fade-carousel {
         position: relative;
-        height: 100vh;
+        height: 80vh;
     }
 
         .fade-carousel .carousel-inner .item {
-            height: 100vh;
+            height: 80vh;
         }
 
         .fade-carousel .carousel-indicators > li {
@@ -126,18 +126,27 @@
 /********************************/
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
-.fade-carousel .slides .slide-3 {
-    height: 100vh;
+.fade-carousel .slides .slide-3,
+.fade-carousel .slides .slide-4 {
+    height: 80vh;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
     .fade-carousel .slides .slide-1 {
-        background-image: url(/images/carousel-bikini.jpg); 
+        background-image: url(/images/slide01.jpg); 
     }
 
     .fade-carousel .slides .slide-2 {
+        background-image: url(/images/slide02.png);
+    }
+
+    .fade-carousel .slides .slide-3 {
+        background-image: url(/images/carousel-bikini.jpg); 
+    }
+
+    .fade-carousel .slides .slide-4 {
         background-image: url(/images/carousel-capsules.jpg);
     }
 

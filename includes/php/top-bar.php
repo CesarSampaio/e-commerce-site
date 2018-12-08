@@ -1,6 +1,6 @@
 <div class="top-bar">
     <div class="logo-bar">
-        <img src="/images/logo.png" alt="" class="logo-img">
+        <img src="/images/logotipo.png" alt="" class="logo-img">
     </div>
     <div class="search-bar">
         <div class="form-search">

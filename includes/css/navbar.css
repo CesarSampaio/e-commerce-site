@@ -4,25 +4,33 @@
     /************************************************************/
     .menu {
         border-bottom: 1px solid rgb(164, 164, 164);
+        background: black;
+        color: #fff;
     }
     
     .navbar {
         margin: 0 auto;
         display: block;
         border-radius: 0;
+        background: black;
+        color: #fff;
     }
 
     .navbar-nav {
         float: none;
         width: 100%;
+        background: black;
+        color: #fff;
     }
 
     .navbar-wrapper {
-        margin: 0 auto;
+        
         height: 4vw;
         font-family: 'Montserrat', sans-serif;
         font-size: 2rem;
         text-align: center;
+        background: black;
+        color: #fff;
     }
 
     .nav {

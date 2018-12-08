@@ -2,6 +2,7 @@
     session_start();
     include "includes/php/db.php";
     include("functions.php");
+    mysqli_set_charset($con, "utf8")
 ?>
 
 <?php
@@ -49,7 +50,7 @@
                                             $get_products = "select * from products where product_id='$pro_id'";
                                             $run_products = mysqli_query($con, $get_products);
                                             while($row_products = mysqli_fetch_array($run_products)) {
-                                                $product_title = $row_products['product_title'];
+                                                $product_title = utf8_encode($row_products['product_title']);
                                                 $product_img1 = $row_products['product_img1'];
                                                 $product_type = $row_products['product_type'];
                                                 $product_weight = $row_products['product_weight'];
@@ -67,7 +68,7 @@
                                                         <img src="product_images/<?php echo $product_img1; ?>" >
                                                     </td>
                                                     <td>
-                                                        <a href="#" > <?php echo $product_title; ?> </a>
+                                                        <a href="#" > <?php echo utf8_encode($product_title); ?> </a>
                                                     </td>
                                                     <td>
                                                         <input type="text" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id="<?php echo $pro_id; ?>" class="quantity form-control">
@@ -82,7 +83,7 @@
                                                         <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
                                                     </td>
                                                     <td>
-                                                        $<?php echo $sub_total; ?>
+                                                        R$<?php echo $sub_total; ?>
                                                     </td>
                                                 </tr><!-- tr Ends -->
                                     <?php
@@ -93,7 +94,7 @@
                                 <tfoot><!-- tfoot Starts -->
                                     <tr>
                                         <th colspan="5"> Total: </th>
-                                        <th colspan="2"> <span class="subtotal-cart-price">$<?php echo $total; ?></span></th>
+                                        <th colspan="2"> <span class="subtotal-cart-price">R$<?php echo $total; ?></span></th>
                                     </tr>
                                 </tfoot><!-- tfoot Ends -->
                             </table><!-- table Ends -->
@@ -577,9 +578,9 @@
                                         <tr class="total">
                                             <td>Total</td>
                                             <?php if(count($physical_products) > 0){ ?>
-                                            <th class="total-cart-price">$<?php echo $total_cart_price; ?></th>
+                                            <th class="total-cart-price">R$ <?php echo $total_cart_price; ?></th>
                                             <?php }else{ ?>
-                                            <th class="total-cart-price">$<?php echo $total; ?></th>
+                                            <th class="total-cart-price">R$ <?php echo $total; ?></th>
                                             <?php } ?>
                                         </tr>
                             </tbody><!-- tbody Ends -->

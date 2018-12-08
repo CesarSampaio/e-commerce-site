@@ -7,12 +7,38 @@
             <ol class="carousel-indicators">
                 <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#bs-carousel" data-slide-to="1"></li>
+                <li data-target="#bs-carousel" data-slide-to="2"></li>
+                <li data-target="#bs-carousel" data-slide-to="3"></li>
             </ol>
             
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item slides active">
                     <div class="slide-1">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="hero">
+                        <hgroup>
+                            <h1></h1>        
+                            <h3></h3>
+                        </hgroup>
+                        <!--<button class="btn btn-hero btn-lg" role="button">Veja Produtos</button>-->
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-2">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="hero">
+                        <hgroup>
+                            <h1></h1>        
+                            <h3></h3>
+                        </hgroup>
+                        <!--<button class="btn btn-hero btn-lg" role="button">Veja Produtos</button>-->
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-3">
                         <div class="overlay"></div>
                     </div>
                     <div class="hero">
@@ -24,7 +50,7 @@
                     </div>
                 </div>
                 <div class="item slides">
-                    <div class="slide-2">
+                    <div class="slide-4">
                         <div class="overlay"></div>
                     </div>
                     <div class="hero">        
